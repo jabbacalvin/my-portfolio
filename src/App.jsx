@@ -4,7 +4,7 @@ import { darkTheme, lightTheme } from "./assets/theme";
 import CssBaseline from "@mui/material/CssBaseline";
 import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import Routes from "./Routes";
 import ThemeContext from "./contexts/themeContext";
 import LoaderContext from "./contexts/loaderContext";
