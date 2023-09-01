@@ -1,11 +1,11 @@
 const skillsList = [
-  { title: "MongoDB", value: 80 },
-  { title: "Express JS ", value: 70 },
-  { title: "React JS", value: 75 },
-  { title: "Node JS ", value: 60 },
-  { title: "Material UI", value: 80 },
-  { title: "Styled components", value: 80 },
-  { title: "Amazon Web Services", value: 70 },
+  { title: "MongoDB" },
+  { title: "Express JS " },
+  { title: "React JS" },
+  { title: "Node JS " },
+  { title: "Material UI" },
+  { title: "Styled components" },
+  { title: "Amazon Web Services" },
 ];
 const projectList = [
   {

@@ -5,7 +5,7 @@ const MainHome = lazy(() => import("./pages/MainHome"));
 // const Navbar = lazy(() => import("./components/Navbar"));
 // const Social = lazy(() => import("./components/Social"));
 // const Footer = lazy(() => import("./components/Footer"));
-// const Loader = lazy(() => import("./components/Loader"));
+const Loader = lazy(() => import("./components/Loader"));
 
 const Router = () => {
   const theme = useTheme();

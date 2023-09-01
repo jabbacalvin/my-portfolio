@@ -11,7 +11,7 @@ const styles = ({ fullWidth, width }) => ({
     display: "inline",
     width: fullWidth ? "100%" : width,
     height: "1px",
-    backgroundColor: "red",
+    backgroundColor: "#87A5C1",
   },
 });
 

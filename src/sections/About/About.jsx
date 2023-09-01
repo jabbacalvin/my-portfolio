@@ -34,7 +34,7 @@ const About = () => {
           <Skills />
         </Grid>
         {!isMobile && (
-          <Grid item xs={12} md={5} className={classes.gridItemWrapper}>
+          <Grid item xs={12} md={5} mt={4} className={classes.gridItemWrapper}>
             <Avatar />
           </Grid>
         )}
