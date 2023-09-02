@@ -1,8 +1,9 @@
-import React from "react";
-import { useTheme, Stack } from "@mui/material";
+import React, { useState } from "react";
+import { useTheme, Stack, IconButton } from "@mui/material";
 import { skillsList } from "../../data";
 import useClasses from "../useClasses";
 import { IconContext } from "react-icons";
+import SnackbarOnHover from "../SnackbarOnHover/SnackbarOnHover";
 import {
   SiCsharp,
   SiDotnet,
@@ -30,9 +31,54 @@ import {
 import { DiMaterializecss, DiJava } from "react-icons/di";
 import { TbBrandGoogleBigQuery } from "react-icons/tb";
 
+const iconMappings = {
+  SiMongodb: SiMongodb,
+  SiExpress: SiExpress,
+  SiReact: SiReact,
+  SiNodedotjs: SiNodedotjs,
+  SiPython: SiPython,
+  SiDjango: SiDjango,
+  SiPostgresql: SiPostgresql,
+  SiCsharp: SiCsharp,
+  SiDotnet: SiDotnet,
+  SiMicrosoftsqlserver: SiMicrosoftsqlserver,
+  SiGoogle: SiGoogle,
+  TbBrandGoogleBigQuery: TbBrandGoogleBigQuery,
+  SiJavascript: SiJavascript,
+  SiJquery: SiJquery,
+  SiHtml5: SiHtml5,
+  SiCss3: SiCss3,
+  DiJava: DiJava,
+  SiBootstrap: SiBootstrap,
+  DiMaterializecss: DiMaterializecss,
+  SiMui: SiMui,
+  SiPostman: SiPostman,
+  SiAmazons3: SiAmazons3,
+  SiJsonwebtokens: SiJsonwebtokens,
+  SiAxios: SiAxios,
+  SiSocketdotio: SiSocketdotio,
+};
+
 const Skills = () => {
   const theme = useTheme();
   const classes = useClasses(styles(theme));
+
+  const [hoverStates, setHoverStates] = useState(
+    new Array(skillsList.length).fill(false)
+  );
+
+  const handleMouseEnter = (index) => {
+    const updatedStates = [...hoverStates];
+    updatedStates[index] = true;
+    setHoverStates(updatedStates);
+  };
+
+  const handleMouseLeave = (index) => {
+    const updatedStates = [...hoverStates];
+    updatedStates[index] = false;
+    setHoverStates(updatedStates);
+  };
+
   return (
     <div className={classes.container}>
       <Stack
@@ -50,31 +96,29 @@ const Skills = () => {
             style: { filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4))" },
           }}
         >
-          <SiMongodb />
-          <SiExpress />
-          <SiReact />
-          <SiNodedotjs />
-          <SiPython />
-          <SiDjango />
-          <SiPostgresql />
-          <SiCsharp />
-          <SiDotnet />
-          <SiMicrosoftsqlserver />
-          <SiGoogle />
-          <TbBrandGoogleBigQuery />
-          <SiJavascript />
-          <SiJquery />
-          <SiHtml5 />
-          <SiCss3 />
-          <DiJava />
-          <SiBootstrap />
-          <DiMaterializecss />
-          <SiMui />
-          <SiPostman />
-          <SiAmazons3 />
-          <SiJsonwebtokens />
-          <SiAxios />
-          <SiSocketdotio />
+          {skillsList.map((skill, i) => {
+            const IconComponent = iconMappings[skill.icon];
+            return IconComponent ? (
+              <div
+                key={i}
+                onMouseEnter={() => handleMouseEnter(i)}
+                onMouseLeave={() => handleMouseLeave(i)}
+              >
+                <IconButton
+                  disableRipple
+                  sx={{ "&:hover": { backgroundColor: "transparent" } }}
+                >
+                  <IconComponent />
+                </IconButton>
+                {hoverStates[i] && (
+                  <SnackbarOnHover
+                    snackbarContent={skill.title}
+                    hoverState={hoverStates[i]}
+                  />
+                )}
+              </div>
+            ) : null;
+          })}
         </IconContext.Provider>
       </Stack>
     </div>
