@@ -42,7 +42,7 @@ const SnackbarOnHover = ({ snackbarContent, hoverState }) => {
   };
 
   const handleTouchStart = (e) => {
-    console.log(isMobile);
+    console.log("Touch event triggered");
     e.preventDefault(); // Prevent the click event after touch
     if (isMobile) {
       setShowSnackbar(!showSnackbar);
