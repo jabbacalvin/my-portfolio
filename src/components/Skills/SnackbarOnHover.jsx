@@ -49,7 +49,12 @@ const SnackbarOnHover = ({ snackbarContent, hoverState }) => {
   };
 
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
+      onTouchStart={handleTouchStart}
+    >
       <Snackbar
         anchorOrigin={anchorOrigin}
         open={showSnackbar && (hoverState || isMobile)}
