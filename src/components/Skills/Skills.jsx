@@ -63,20 +63,32 @@ const Skills = () => {
   const theme = useTheme();
   const classes = useClasses(styles(theme));
 
-  const [hoverStates, setHoverStates] = useState(
+  const [iconStates, setIconStates] = useState(
     new Array(skillsList.length).fill(false)
   );
 
   const handleMouseEnter = (index) => {
-    const updatedStates = [...hoverStates];
-    updatedStates[index] = true;
-    setHoverStates(updatedStates);
+    setIconStates((prevState) => {
+      const updatedStates = [...prevState];
+      updatedStates[index] = true;
+      return updatedStates;
+    });
   };
 
   const handleMouseLeave = (index) => {
-    const updatedStates = [...hoverStates];
-    updatedStates[index] = false;
-    setHoverStates(updatedStates);
+    setIconStates((prevState) => {
+      const updatedStates = [...prevState];
+      updatedStates[index] = false;
+      return updatedStates;
+    });
+  };
+
+  const handleIconClick = (index) => {
+    setIconStates((prevState) => {
+      const updatedStates = [...prevState];
+      updatedStates[index] = !updatedStates[index];
+      return updatedStates;
+    });
   };
 
   return (
@@ -103,6 +115,7 @@ const Skills = () => {
                 key={i}
                 onMouseEnter={() => handleMouseEnter(i)}
                 onMouseLeave={() => handleMouseLeave(i)}
+                onClick={() => handleIconClick(i)}
               >
                 <IconButton
                   disableRipple
@@ -110,10 +123,10 @@ const Skills = () => {
                 >
                   <IconComponent />
                 </IconButton>
-                {hoverStates[i] && (
+                {iconStates[i] && (
                   <SnackbarOnHover
                     snackbarContent={skill.title}
-                    hoverState={hoverStates[i]}
+                    iconStates={iconStates[i]}
                   />
                 )}
               </div>
