@@ -65,7 +65,7 @@ const Calvin = (props) => {
           {...props}
         >
           <clipPath id="c">
-            <path d="M307.6 80V199" />
+            <path d="M25.9 80.1V29.7h2.9l18.3 27.6 18.2-27.6h2.8v50.4h-2.7V34.2L47.7 60.8h-1.4L28.6 34.3V80h-2.7z" />
           </clipPath>
           <g
             fill="none"
@@ -80,7 +80,7 @@ const Calvin = (props) => {
               d="M25.9 82.3V31.9c7 9.9 13.9 19.8 20.9 29.8 6.2-9.9 12.3-19.8 18.5-29.8.5 16.5.9 32.9 1.4 49.4"
             />
           </g>
-          {/* <motion.path
+          <motion.path
             {...rectProps}
             strokeWidth={2}
             fill="none"
@@ -89,7 +89,7 @@ const Calvin = (props) => {
             d="M12.7 14.8h349.7v83.3H12.7z"
             strokeDasharray={866}
             strokeDashoffset={866}
-          /> */}
+          />
         </motion.svg>
       </motion.div>
     </>
