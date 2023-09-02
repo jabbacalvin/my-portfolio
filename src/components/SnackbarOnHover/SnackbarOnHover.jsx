@@ -1,64 +1,27 @@
 import React, { useState, useEffect } from "react";
-import {
-  useTheme,
-  useMediaQuery,
-  Snackbar,
-  SnackbarContent,
-  IconButton,
-} from "@mui/material";
+import { Snackbar, SnackbarContent, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
 const SnackbarOnHover = ({ snackbarContent, hoverState }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [showSnackbar, setShowSnackbar] = useState(false);
-  const [anchorOrigin, setAnchorOrigin] = useState({
-    vertical: "bottom",
-    horizontal: isMobile ? "center" : "right", // Center on mobile, right on desktop
-  });
 
   useEffect(() => {
-    if (!isMobile) {
-      setShowSnackbar(hoverState);
-    }
-  }, [hoverState, isMobile]);
+    setShowSnackbar(hoverState);
+  }, [hoverState]);
 
   const handleMouseEnter = () => {
-    if (!isMobile) {
-      setShowSnackbar(true);
-    }
+    setShowSnackbar(true);
   };
 
   const handleMouseLeave = () => {
-    if (!isMobile) {
-      setShowSnackbar(false);
-    }
-  };
-
-  const handleClick = () => {
-    if (isMobile) {
-      setShowSnackbar(!showSnackbar);
-    }
-  };
-
-  const handleTouchStart = (e) => {
-    console.log("Touch event triggered");
-    e.preventDefault(); // Prevent the click event after touch
-    if (isMobile) {
-      setShowSnackbar(!showSnackbar);
-    }
+    setShowSnackbar(false);
   };
 
   return (
-    <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleClick}
-      onTouchStart={handleTouchStart}
-    >
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Snackbar
-        anchorOrigin={anchorOrigin}
-        open={showSnackbar && (hoverState || isMobile)}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        open={showSnackbar}
         autoHideDuration={3000}
         onClose={() => setShowSnackbar(false)}
       >
