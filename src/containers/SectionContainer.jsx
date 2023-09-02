@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, useTheme } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Divider from "../components/Divider";
 import useClasses from "../components/useClasses";
-import { useTheme } from "@emotion/react";
 
 const SectionContainer = ({
   children,
@@ -56,7 +55,12 @@ const SectionContainer = ({
           className={classes.titleContainer}
         >
           <Divider width="20%" />
-          <Typography variant="h4" color="initial" className={classes.title}>
+          <Typography
+            variant="h4"
+            color="initial"
+            className={classes.title}
+            sx={{ ml: 4, mr: 4 }}
+          >
             {title}
           </Typography>
           <Divider fullWidth />
@@ -96,7 +100,7 @@ const styles = ({ full, maxWidth, padding, theme }) => ({
     maxWidth: "100%",
   },
   title: {
-    margin: theme.spacing(0, 4),
+    // margin: theme.spacing(0, 4),
     textTransform: "uppercase",
     whiteSpace: "nowrap",
   },

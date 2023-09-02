@@ -3,7 +3,7 @@ import { useTheme, Stack, IconButton } from "@mui/material";
 import { skillsList } from "../../data";
 import useClasses from "../useClasses";
 import { IconContext } from "react-icons";
-import SnackbarOnHover from "../SnackbarOnHover/SnackbarOnHover";
+import SnackbarOnHover from "../SnackbarOnHover";
 import {
   SiCsharp,
   SiDotnet,
