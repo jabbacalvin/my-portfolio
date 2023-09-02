@@ -9,9 +9,9 @@ const Avatar = () => {
 
 const styles = (theme) => ({
   avatarImg: {
-    borderRadius: "50%",
-    width: "270px",
-    height: "270px",
+    borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70% ",
+    // width: "270px",
+    // height: "270px",
     objectFit: "cover",
     boxShadow: theme.shadows[10],
   },

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 // import Home from "../../sections/Home";
 import About from "../../sections/About";
 // import Experience from "../../sections/Experience";
-// import Projects from "../../sections/Projects";
+import Projects from "../../sections/Projects";
 // import Contact from "../../sections/Contact";
 import Background3d from "../../components/Background3d.js/Background3d";
 import { useMediaQuery, useTheme } from "@mui/material";

@@ -3,7 +3,7 @@ import { useTheme, Stack, IconButton } from "@mui/material";
 import { skillsList } from "../../data";
 import useClasses from "../useClasses";
 import { IconContext } from "react-icons";
-import SnackbarOnHover from "../SnackbarOnHover";
+import SnackbarOnHover from "./SnackbarOnHover";
 import {
   SiCsharp,
   SiDotnet,
@@ -83,7 +83,7 @@ const Skills = () => {
     <div className={classes.container}>
       <Stack
         direction="row"
-        spacing={4}
+        spacing={2}
         useFlexGap
         flexWrap="wrap"
         justifyContent="center"
