@@ -24,7 +24,7 @@ const MainHome = () => {
       {/* <Home /> */}
       <About />
       {/* <Experience /> */}
-      {/* <Projects /> */}
+      <Projects />
       {/* <Contact /> */}
       {/* {!isMobile && <Background3d />} */}
     </motion.main>

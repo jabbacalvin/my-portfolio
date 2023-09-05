@@ -27,6 +27,7 @@ import {
   SiJsonwebtokens,
   SiAxios,
   SiSocketdotio,
+  SiGooglemaps,
 } from "react-icons/si";
 import { DiMaterializecss, DiJava } from "react-icons/di";
 import { TbBrandGoogleBigQuery } from "react-icons/tb";
@@ -57,6 +58,7 @@ const iconMappings = {
   SiJsonwebtokens: SiJsonwebtokens,
   SiAxios: SiAxios,
   SiSocketdotio: SiSocketdotio,
+  SiGooglemaps: SiGooglemaps,
 };
 
 const Skills = () => {

@@ -1,111 +1,245 @@
-import React, { useState, useEffect } from "react";
-import { AnimatePresence, LayoutGroup } from "framer-motion";
-import { Grid, Button, Box, useMediaQuery, useTheme } from "@mui/material";
-import Card from "./Card";
-import ExtendedCard from "./ExtendedCard";
+import React, { useState } from "react";
 import { projectList } from "../../data";
+import {
+  Grid,
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Stack,
+  Divider,
+  IconButton,
+  Tooltip,
+  Fade,
+} from "@mui/material";
 import { useTranslation } from "react-i18next";
 import useClasses from "../useClasses";
+import { IconContext } from "react-icons";
+import {
+  SiCsharp,
+  SiDotnet,
+  SiJavascript,
+  SiMicrosoftsqlserver,
+  SiPostgresql,
+  SiHtml5,
+  SiCss3,
+  SiPython,
+  SiGoogle,
+  SiReact,
+  SiJquery,
+  SiBootstrap,
+  SiMui,
+  SiMongodb,
+  SiExpress,
+  SiNodedotjs,
+  SiDjango,
+  SiPostman,
+  SiAmazons3,
+  SiJsonwebtokens,
+  SiAxios,
+  SiSocketdotio,
+  SiGooglemaps,
+  SiYoutube,
+  SiTwitch,
+  SiGithub,
+} from "react-icons/si";
+import { DiMaterializecss, DiJava } from "react-icons/di";
+import { TbBrandGoogleBigQuery } from "react-icons/tb";
+import { FaStripe, FaLink } from "react-icons/fa6";
 
-const ProjectsGallery = () => {
-  const classes = useClasses(styles);
-  const { t } = useTranslation();
-  const [selectedId, setSelectedId] = useState(null);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const [loadedProjects, setLoadedProjects] = useState([]);
-  const [pageNo, setPageNo] = useState(0);
-  const [pageSize, setPageSize] = useState(6);
+const iconMappings = {
+  SiMongodb: SiMongodb,
+  SiExpress: SiExpress,
+  SiReact: SiReact,
+  SiNodedotjs: SiNodedotjs,
+  SiPython: SiPython,
+  SiDjango: SiDjango,
+  SiPostgresql: SiPostgresql,
+  SiCsharp: SiCsharp,
+  SiDotnet: SiDotnet,
+  SiMicrosoftsqlserver: SiMicrosoftsqlserver,
+  SiGoogle: SiGoogle,
+  TbBrandGoogleBigQuery: TbBrandGoogleBigQuery,
+  SiJavascript: SiJavascript,
+  SiJquery: SiJquery,
+  SiHtml5: SiHtml5,
+  SiCss3: SiCss3,
+  DiJava: DiJava,
+  SiBootstrap: SiBootstrap,
+  DiMaterializecss: DiMaterializecss,
+  SiMui: SiMui,
+  SiPostman: SiPostman,
+  SiAmazons3: SiAmazons3,
+  SiJsonwebtokens: SiJsonwebtokens,
+  SiAxios: SiAxios,
+  SiSocketdotio: SiSocketdotio,
+  SiGooglemaps: SiGooglemaps,
+  SiYoutube: SiYoutube,
+  SiTwitch: SiTwitch,
+  FaStripe: FaStripe,
+};
 
-  const getSelected = (id) => projectList.find((elem) => elem.id === id);
+const Project = ({ project }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-  function loadProjects() {
-    const startIndex = pageNo * pageSize;
-    const endIndex = startIndex + pageSize;
-    let newProjects = projectList.filter((value, index) => {
-      return index >= startIndex && index < endIndex;
-    });
-    setLoadedProjects((prevProjects) => [...prevProjects, ...newProjects]);
-    setPageNo((prevPageNo) => prevPageNo + 1);
-  }
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
 
-  useEffect(() => {
-    if (isMobile) setPageSize(3);
-    loadProjects();
-  }, []);
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
-    <>
-      {/* <LayoutGroup>
-        <Grid container spacing={4} className={classes.galleryContainer}>
-          {loadedProjects.map((item, k) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              key={item.id}
-              classes={{ item: classes.item }}
-            >
-              <Card
-                layoutId={`card-${item.id}`}
-                id={item.id}
-                title={item.title}
-                overview={t(`projects_${item.id}_overview`)}
-                backgroundImage={item.backgroundImage}
-                frontImage={item.frontImage}
-                technologies={item.technologies}
-                onClick={() => setSelectedId(item.id)}
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-              />
-            </Grid>
-          ))}
-        </Grid>
-        <AnimatePresence>
-          {selectedId && (
-            <ExtendedCard
-              key={selectedId}
-              layoutId={`card-${selectedId}`}
-              id={selectedId}
-              title={getSelected(selectedId).title}
-              overview={t(`projects_${selectedId}_extended_overview`)}
-              backgroundImage={getSelected(selectedId).backgroundImage}
-              frontImage={getSelected(selectedId).frontImage}
-              technologies={getSelected(selectedId).technologies}
-              handleClose={() => setSelectedId(null)}
-            />
-          )}
-        </AnimatePresence>
-      </LayoutGroup>
-      {loadedProjects.length < projectList.length && (
-        <Box display="flex" justifyContent="center" mt={2}>
-          <Button
-            className={classes.loadBtn}
-            onClick={loadProjects}
-            variant="contained"
-            color="primary"
+    <Grid item xs={12} md={6} key={project.id} align="center">
+      <Card
+        sx={{
+          maxWidth: 580,
+          cursor: project.gifImage !== "" ? "pointer" : "",
+          backgroundColor: "transparent",
+          border: "none",
+          boxShadow: "none",
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <CardMedia
+          sx={{
+            height: { sx: 1.0, xs: 200, md: 270, lg: 330 },
+            objectFit: "cover",
+          }}
+          image={
+            !isHovered
+              ? project.staticImage
+              : project.gifImage !== ""
+              ? project.gifImage
+              : project.staticImage
+          }
+          title={project.title}
+        />
+        <CardContent sx={{ p: 0 }}>
+          <Typography
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              paddingBottom: "0px",
+            }}
+            variant="overline"
           >
-            {t("project_load_btn")}
-          </Button>
-        </Box>
-      )} */}
-    </>
+            {project.github ? (
+              <IconContext.Provider
+                value={{
+                  size: "20",
+                  color: "white",
+                  style: {
+                    filter: "drop-shadow(3px 5px 2px rgb(255 255 255 / 0.4))",
+                  },
+                }}
+              >
+                <Tooltip
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 1800 }}
+                  disableFocusListener
+                  title="GitHub"
+                >
+                  <IconButton
+                    href={project.github && project.github}
+                    target="_blank"
+                  >
+                    <SiGithub />
+                  </IconButton>
+                </Tooltip>
+              </IconContext.Provider>
+            ) : (
+              ""
+            )}
+            <IconContext.Provider
+              value={{
+                size: "20",
+                color: "white",
+                style: {
+                  filter: "drop-shadow(3px 5px 2px rgb(255 255 255 / 0.4))",
+                },
+              }}
+            >
+              <Tooltip
+                TransitionComponent={Fade}
+                TransitionProps={{ timeout: 1800 }}
+                disableFocusListener
+                title="Demo"
+              >
+                <IconButton
+                  href={project.liveSite && project.liveSite}
+                  target="_blank"
+                >
+                  <FaLink />
+                </IconButton>
+              </Tooltip>
+            </IconContext.Provider>
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div">
+            {project.title}
+          </Typography>
+          <Typography variant="subtitle2">{project.subtitle}</Typography>
+          <Divider />
+          <Typography variant="caption">{project.description}</Typography>
+          <Divider />
+          <Typography variant="caption">
+            <Stack
+              direction="row"
+              spacing={2}
+              useFlexGap
+              flexWrap="wrap"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <IconContext.Provider
+                value={{
+                  size: "25",
+                  color: "white",
+                  style: {
+                    filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4))",
+                  },
+                }}
+              >
+                {project.technologies.map((tech, i) => {
+                  const IconComponent = iconMappings[tech.icon && tech.icon];
+                  return IconComponent ? (
+                    <div key={i}>
+                      <Tooltip
+                        TransitionComponent={Fade}
+                        TransitionProps={{ timeout: 1800 }}
+                        disableFocusListener
+                        title={tech.title && tech.title}
+                      >
+                        <IconButton
+                          disableRipple
+                          sx={{ "&:hover": { backgroundColor: "transparent" } }}
+                        >
+                          <IconComponent />
+                        </IconButton>
+                      </Tooltip>
+                    </div>
+                  ) : null;
+                })}
+              </IconContext.Provider>
+            </Stack>
+          </Typography>
+        </CardContent>
+      </Card>
+    </Grid>
   );
 };
 
-const styles = (theme) => ({
-  galleryContainer: {
-    overflow: "visible",
-    width: "100%",
-    margin: "0 auto",
-  },
-  item: {
-    overflow: "visible",
-  },
-  loadBtn: {
-    width: "200px",
-  },
-});
+const ProjectsGallery = () => {
+  return (
+    <Grid container spacing={2} justify="center">
+      {projectList.map((project) => (
+        <Project key={project.id} project={project} />
+      ))}
+    </Grid>
+  );
+};
 
 export default ProjectsGallery;
