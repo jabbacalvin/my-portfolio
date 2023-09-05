@@ -105,7 +105,7 @@ const Project = ({ project }) => {
       >
         <CardMedia
           sx={{
-            height: { sx: 1.0, xs: 200, md: 270, lg: 330 },
+            height: { sx: 1.0, xs: 220, md: 270, lg: 330 },
             objectFit: "cover",
           }}
           image={
