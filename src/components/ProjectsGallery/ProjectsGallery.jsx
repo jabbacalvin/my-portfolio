@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projectList } from "../../data";
 import {
   Grid,
@@ -79,6 +79,18 @@ const iconMappings = {
   FaStripe: FaStripe,
 };
 
+function PreloadImage({ src }) {
+  const [image, setImage] = useState(null);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => setImage(src);
+  }, [src]);
+
+  return image ? <img src={image} alt="" style={{ display: "none" }} /> : null;
+}
+
 const Project = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -117,6 +129,8 @@ const Project = ({ project }) => {
           }
           title={project.title}
         />
+        <PreloadImage src={project.staticImage} />
+        <PreloadImage src={project.gifImage} />
         <CardContent sx={{ p: 0 }}>
           <Typography
             sx={{
@@ -235,9 +249,12 @@ const Project = ({ project }) => {
 const ProjectsGallery = () => {
   return (
     <Grid container spacing={2} justify="center">
-      {projectList.map((project) => (
-        <Project key={project.id} project={project} />
-      ))}
+      {projectList
+        .slice()
+        .reverse()
+        .map((project) => (
+          <Project key={project.id} project={project} />
+        ))}
     </Grid>
   );
 };

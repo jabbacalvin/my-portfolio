@@ -77,8 +77,8 @@ const projectList = [
   // },
   {
     id: 2,
-    title: "Children's Matching Game",
-    subtitle: "",
+    title: "Matching Game",
+    subtitle: "Children's Game to Enhance Pattern Recognition",
     description:
       "The Matching Game was thoughtfully crafted as an engaging educational drag-and-drop browser game for toddlers, offering them the opportunity to match letters, shapes, numbers, animals, and beloved cartoon characters within a charming 3x3 tile grid.",
     technologies: [
@@ -96,7 +96,7 @@ const projectList = [
     title: "Touch Grass",
     subtitle: "Valorant Lineups Sharing App",
     description:
-      "Touch Grass is a versatile web app tailored for Valorant lineup curation, catering to gamers' needs by simplifying lineup exploration through filtering agent and map selection. The app allows users to create, modify, or remove their favorite lineups and strategies to share with fellow players.",
+      "Touch Grass is a versatile web app tailored for Valorant lineup curation, catering to gamers' needs by simplifying lineup exploration through filtering agent and map selection. The app allows users to create, modify, or remove their lineups and strategies to share with fellow players.",
     technologies: [
       { title: "NodeJS", icon: "SiNodedotjs" },
       { title: "Express.js", icon: "SiExpress" },
@@ -143,7 +143,7 @@ const projectList = [
     title: "Adventur Chats",
     subtitle: "Travel App with Chatting",
     description:
-      "Adventur Chats is a travel social app that connects travelers, allowing them to share past, current, and upcoming journeys. It includes a chat feature for making friends and seeking travel advice, fostering a vibrant community of explorers.",
+      "Adventur Chats is a travel social app that connects travelers, allowing them to share their journeys in the form of posts and comments. This app also includes a chat feature for making friends and seeking travel advice, fostering a vibrant community of explorers, connecting everyone from anywhere, transforming solo adventures into shared experiences.",
     technologies: [
       { title: "MongoDB", icon: "SiMongodb" },
       { title: "Express.js", icon: "SiExpress" },

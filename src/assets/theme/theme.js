@@ -40,11 +40,11 @@ const darkTheme = createTheme({
     },
     primary: {
       main: "#bd3b22",
-      contrastText: "#fff",
+      contrastText: "#FFF",
     },
     secondary: {
       main: "#2C394B",
-      contrastText: "#fff",
+      contrastText: "#FFF",
     },
     text: {
       primary: "#FFF",
@@ -55,7 +55,7 @@ const darkTheme = createTheme({
       disabledBackground: "rgb(150,150,150)",
     },
   },
-  logoColor: "#fff",
+  logoColor: "#FFF",
   ...baseTheme,
 });
 

@@ -57,7 +57,7 @@ const SectionContainer = ({
           <Divider width="20%" />
           <Typography
             variant="h4"
-            color="initial"
+            // color="initial"
             className={classes.title}
             sx={{ ml: 4, mr: 4 }}
           >
