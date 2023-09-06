@@ -1,11 +1,11 @@
 import React from "react";
 import LoaderContainer from "../../containers/LoaderContainer";
-import Calvin from "../../assets/images/Calvin";
+import { ReactComponent as Calvin } from "../../assets/images/Calvin.svg";
 
 const Loader = () => {
   return (
     <LoaderContainer>
-      <Calvin width={250} />
+      <Calvin width={500} />
     </LoaderContainer>
   );
 };

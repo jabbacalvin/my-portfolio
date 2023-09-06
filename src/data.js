@@ -170,18 +170,18 @@ const projectList = [
 const experienceList = [
   {
     id: 0,
-    company: "Code Hub",
+    company: "",
     links: {
-      website: "https://www.codehub.tn",
-      facebook: "https://www.facebook.com/codehubtn/",
-      instagram: "https://www.instagram.com/codehub.coworking/",
+      website: "",
+      facebook: "",
+      instagram: "",
     },
   },
   {
     id: 1,
-    company: "vapoter.tn",
+    company: "",
     links: {
-      instagram: "https://www.instagram.com/vapoter.tn/",
+      instagram: "",
     },
   },
 ];

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, useTheme } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-scroll";
 import HomeContainer from "../../containers/HomeContainer";
@@ -9,7 +9,8 @@ import loaderContext from "../../contexts/loaderContext";
 import useClasses from "../../components/useClasses";
 
 const Home = () => {
-  const classes = useClasses(styles);
+  const theme = useTheme();
+  // const classes = useClasses(styles(theme));
   const { isLoading } = useContext(loaderContext);
   const controls = useAnimation();
   const { t } = useTranslation();
@@ -47,16 +48,19 @@ const Home = () => {
           </motion.div>
           , {t("home_i")}
         </Typography>
-        <motion.div animate={controls} custom={1}>
+        {/* <motion.div animate={controls} custom={1}>
           <VideoLogo />
-        </motion.div>
+        </motion.div> */}
         <Typography
           component={motion.p}
           animate={controls}
           custom={2}
           variant="h2"
           color="secondary"
-          className={classes.subTitle}
+          sx={{
+            marginBottom: "16px",
+            fontSize: { lg: "75px", sm: "45px", xs: "35px" },
+          }}
         >
           {t("home_what_i_do")}
         </Typography>
@@ -80,7 +84,7 @@ const Home = () => {
         >
           {t("home_location")}
         </Typography>
-        <motion.div animate={controls} custom={5}>
+        {/* <motion.div animate={controls} custom={5}>
           <Button
             component={Link}
             spy
@@ -94,23 +98,23 @@ const Home = () => {
           >
             {t("home_contact_btn")}
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </HomeContainer>
   );
 };
 
-const styles = (theme) => ({
-  subTitle: {
-    marginBottom: "16px",
-    fontSize: "75px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "45px",
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "35px",
-    },
-  },
-});
+// const styles = (theme) => ({
+//   subtitle: {
+//     marginBottom: "16px",
+//     fontSize: "75px",
+//     [theme.breakpoints.down("sm")]: {
+//       fontSize: "45px",
+//     },
+//     [theme.breakpoints.down("xs")]: {
+//       fontSize: "35px",
+//     },
+//   },
+// });
 
 export default Home;

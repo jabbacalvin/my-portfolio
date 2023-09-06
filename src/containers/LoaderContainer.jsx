@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "@mui/material";
 import LoaderContext from "../contexts/loaderContext";
 import useClasses from "../components/useClasses";
 
 const LoaderContainer = ({ children }) => {
   const { setIsLoading } = useContext(LoaderContext);
-  const classes = useClasses(styles);
+  const theme = useTheme();
+  const classes = useClasses(styles(theme));
   return (
     <motion.div
       initial={{
@@ -15,7 +17,7 @@ const LoaderContainer = ({ children }) => {
         y: "-100vh",
       }}
       transition={{
-        delay: 4.2,
+        delay: 5,
         duration: 0.3,
       }}
       onAnimationComplete={(definition) => {

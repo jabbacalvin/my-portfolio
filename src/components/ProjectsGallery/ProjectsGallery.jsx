@@ -107,7 +107,7 @@ const Project = ({ project }) => {
       <Card
         sx={{
           maxWidth: 580,
-          cursor: project.gifImage !== "" ? "pointer" : "",
+          cursor: project.gifImage !== "" ? "progress" : "",
           backgroundColor: "transparent",
           border: "none",
           boxShadow: "none",
@@ -192,10 +192,12 @@ const Project = ({ project }) => {
               </Tooltip>
             </IconContext.Provider>
           </Typography>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography gutterBottom variant="h6" component="div" color="primary">
             {project.title}
           </Typography>
-          <Typography variant="subtitle2">{project.subtitle}</Typography>
+          <Typography variant="subtitle2" color="secondary">
+            {project.subtitle}
+          </Typography>
           <Divider />
           <Typography variant="caption">{project.description}</Typography>
           <Divider />
