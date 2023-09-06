@@ -30,7 +30,7 @@ function App() {
             <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
               <CssBaseline />
               <ScrollToTop />
-              <Routes />
+              <Routes isDarkMode={isDarkMode} />
             </ThemeProvider>
           </LoaderContext.Provider>
         </ThemeContext.Provider>

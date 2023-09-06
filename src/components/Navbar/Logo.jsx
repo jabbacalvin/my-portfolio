@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-scroll";
-import logo from "../../assets/images/logo.png";
+import logo_dark from "../../assets/images/logo_dark.png";
+import logo_light from "../../assets/images/logo_light.png";
 import useClasses from "../useClasses";
 
-const Logo = ({ setHomeIsActive, ...rest }) => {
+const Logo = ({ setHomeIsActive, isDarkMode }) => {
   const classes = useClasses(styles);
   return (
     <Link
@@ -16,7 +17,11 @@ const Logo = ({ setHomeIsActive, ...rest }) => {
       onSetInactive={() => setHomeIsActive(false)}
       className={classes.root}
     >
-      <img src={logo} alt="Home" width="150px" />
+      {isDarkMode ? (
+        <img src={logo_light} alt="Home" width="150px" />
+      ) : (
+        <img src={logo_dark} alt="Home" width="150px" />
+      )}
     </Link>
   );
 };

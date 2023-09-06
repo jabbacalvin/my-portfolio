@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Link } from "@mui/material";
+import { Box, Link, IconButton, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import useClasses from "./useClasses";
 
-const IconBtn = ({ icon: Icon, href, fontSize, ...rest }) => {
-  const classes = useClasses(styles({ fontSize }));
+const IconBtn = ({ icon: IconButton, href, fontSize, ...rest }) => {
+  const theme = useTheme();
+
   return (
     <Box
       display="inline"
@@ -12,23 +13,21 @@ const IconBtn = ({ icon: Icon, href, fontSize, ...rest }) => {
       component={motion.div}
       whileHover={{ scale: 1.1 }}
     >
-      <Link href={href}>
-        <Icon className={classes.icon} />
+      <Link href={href} target="_blank">
+        <IconButton
+          sx={{
+            color: theme.palette.text.secondary,
+            transition: "0.1s",
+            cursor: "pointer",
+            fontSize: fontSize ? `${fontSize}px` : "32px",
+            "&:hover": {
+              color: theme.palette.text.primary,
+            },
+          }}
+        />
       </Link>
     </Box>
   );
 };
-
-const styles = ({ fontSize, theme }) => ({
-  icon: {
-    color: theme.palette.text.secondary,
-    transition: "0.1s",
-    cursor: "pointer",
-    fontSize: fontSize ? `${fontSize}px` : "32px",
-    "&:hover": {
-      color: theme.palette.text.primary,
-    },
-  },
-});
 
 export default IconBtn;

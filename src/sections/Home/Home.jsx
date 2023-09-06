@@ -84,37 +84,22 @@ const Home = () => {
         >
           {t("home_location")}
         </Typography>
-        {/* <motion.div animate={controls} custom={5}>
-          <Button
-            component={Link}
-            spy
-            smooth
-            offset={0}
-            duration={500}
-            to="contact"
-            variant="outlined"
-            color="primary"
-            size="large"
-          >
-            {t("home_contact_btn")}
-          </Button>
-        </motion.div> */}
+        <motion.div animate={controls} custom={5}>
+          <Link to="contact" spy smooth>
+            <Button
+              offset={0}
+              duration={500}
+              variant="outlined"
+              color="primary"
+              size="large"
+            >
+              {t("home_contact_btn")}
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </HomeContainer>
   );
 };
-
-// const styles = (theme) => ({
-//   subtitle: {
-//     marginBottom: "16px",
-//     fontSize: "75px",
-//     [theme.breakpoints.down("sm")]: {
-//       fontSize: "45px",
-//     },
-//     [theme.breakpoints.down("xs")]: {
-//       fontSize: "35px",
-//     },
-//   },
-// });
 
 export default Home;

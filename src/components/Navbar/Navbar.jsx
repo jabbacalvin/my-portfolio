@@ -14,7 +14,7 @@ import HamburgerIcon from "./HamburgerIcon";
 import loaderContext from "../../contexts/loaderContext";
 import useClasses from "../useClasses";
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode }) => {
   const [homeIsActive, setHomeIsActive] = useState(true);
   const isMobile = useMediaQuery("(max-width:700px)");
   const { isLoading } = useContext(loaderContext);
@@ -66,7 +66,7 @@ const Navbar = () => {
             damping: 20,
           }}
         >
-          <Logo setHomeIsActive={setHomeIsActive} />
+          <Logo setHomeIsActive={setHomeIsActive} isDarkMode={isDarkMode} />
           <Hidden smDown>
             <Menu homeIsActive={homeIsActive} />
           </Hidden>
