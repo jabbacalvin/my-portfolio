@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 const MainHome = lazy(() => import("./pages/MainHome"));
 const Navbar = lazy(() => import("./components/Navbar"));
 const Socials = lazy(() => import("./components/Socials"));
-// const Footer = lazy(() => import("./components/Footer"));
+const Footer = lazy(() => import("./components/Footer"));
 const Loader = lazy(() => import("./components/Loader"));
 
 const Router = ({ isDarkMode }) => {
@@ -18,7 +18,7 @@ const Router = ({ isDarkMode }) => {
       <Routes>
         <Route exact path="/" element={<MainHome />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

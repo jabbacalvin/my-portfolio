@@ -36,8 +36,8 @@ const MessageBox = () => {
     validationSchema: Yup.object({
       user_name: Yup.string().required("Name is required"),
       user_email: Yup.string()
-        .email("Email adress is not valid")
-        .required("Email adress is required"),
+        .email("Email address is not valid")
+        .required("Email address is required"),
       message: Yup.string().required("message is required"),
     }),
     onSubmit: (values) => {
@@ -52,7 +52,7 @@ const MessageBox = () => {
     <Container maxWidth="md">
       <Box
         overflow="hidden"
-        style={{ position: "relative", minHeight: "600px" }}
+        style={{ position: "relative", minHeight: "500px" }}
       >
         <AnimatePresence>
           {!sendEmailSuccess && (

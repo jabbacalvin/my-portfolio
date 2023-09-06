@@ -9,7 +9,7 @@ import useClasses from "../../components/useClasses";
 const About = () => {
   const classes = useClasses(styles);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const { t } = useTranslation();
   return (
     <SectionContainer id="about" title={t("menu_about")} maxWidth="md">
