@@ -1,0 +1,341 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1115 249" style="enable-background:new 0 0 1115 249;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#fff;stroke-width:11;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#fff;stroke-width:24;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#fff;stroke-width:15;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#fff;stroke-width:18;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#fff;stroke-width:25;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#fff;stroke-width:19;stroke-miterlimit:10;}
+	.st6{clip-path:url(#SVGID_2_);}
+	.st7{clip-path:url(#SVGID_4_);}
+
+	@keyframes offset_one {
+
+		10%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_one {
+
+		stroke-dasharray: 359;
+		stroke-dashoffset: 359;
+		animation: offset_one 5s ease-out forwards;
+	}
+
+	@keyframes offset_two {
+
+		6% {
+
+			stroke-dashoffset: 119;
+		}
+
+		12%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_two {
+
+		stroke-dasharray: 119;
+		stroke-dashoffset: 119;
+		animation: offset_two 5s ease-out forwards;
+	}
+
+	@keyframes offset_three {
+
+		10% {
+
+	        stroke-dashoffset: 311;
+		}
+
+		20%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_three {
+
+		stroke-dasharray: 311;
+		stroke-dashoffset: 311;
+		animation: offset_three 5s ease-out forwards;
+	}
+
+	@keyframes offset_four {
+
+		14% {
+
+	        stroke-dashoffset: 160;
+		}
+
+		22%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_four {
+
+		stroke-dasharray: 160;
+		stroke-dashoffset: 160;
+		animation: offset_four 5s ease-out forwards;
+	}
+
+	@keyframes offset_five {
+
+		18% {
+
+	        stroke-dashoffset: 251;
+		}
+
+		27%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_five {
+
+		stroke-dasharray: 251;
+		stroke-dashoffset: 251;
+		animation: offset_five 5s ease-out forwards;
+	}
+
+	@keyframes offset_six {
+
+		24% {
+
+	        stroke-dashoffset: 168;
+		}
+
+		34%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_six {
+
+		stroke-dasharray: 168;
+		stroke-dashoffset: 168;
+		animation: offset_six 5s ease-out forwards;
+	}
+
+	@keyframes offset_seven {
+
+		26% {
+
+	        stroke-dashoffset: 122;
+		}
+
+		32%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_seven {
+
+		stroke-dasharray: 122;
+		stroke-dashoffset: 122;
+		animation: offset_seven 5s ease-out forwards;
+	}
+
+	@keyframes offset_eight {
+
+		30% {
+
+	        stroke-dashoffset: 203;
+		}
+
+		38%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_eight {
+
+		stroke-dasharray: 203;
+		stroke-dashoffset: 203;
+		animation: offset_eight 5s ease-out forwards;
+	}
+
+	@keyframes offset_nine {
+
+		34% {
+
+	        stroke-dashoffset: 322;
+		}
+
+		46%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_nine {
+
+		stroke-dasharray: 322;
+		stroke-dashoffset: 322;
+		animation: offset_nine 5s ease-out forwards;
+	}
+
+	@keyframes offset_ten {
+
+		40% {
+
+	        stroke-dashoffset: 152;
+		}
+
+		47.18%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_ten {
+
+		stroke-dasharray: 152;
+		stroke-dashoffset: 152;
+		animation: offset_ten 5s ease-out forwards;
+	}
+
+	@keyframes offset_eleventh {
+
+		44% {
+
+	        stroke-dashoffset: 290;
+		}
+
+		54%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_eleventh {
+
+		stroke-dasharray: 290;
+		stroke-dashoffset: 290;
+		animation: offset_eleventh 5s ease-out forwards;
+	}
+
+	@keyframes offset_twelve {
+
+		52% {
+
+	        stroke-dashoffset: 187;
+		}
+
+		60%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_twelve {
+
+		stroke-dasharray: 187;
+		stroke-dashoffset: 187;
+		animation: offset_twelve 5s ease-out forwards;
+	}
+
+	@keyframes offset_thirteen {
+
+		54% {
+
+	        stroke-dashoffset: 122;
+		}
+
+		62%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub_thirteen {
+
+		stroke-dasharray: 122;
+		stroke-dashoffset: 122;
+		animation: offset_thirteen 5s ease-out forwards;
+	}
+
+	@keyframes offset_fourteen {
+
+		20% {
+
+	        stroke-dashoffset: 2690;
+		}
+
+		70%, 100% {
+
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.bdr {
+
+		stroke-dasharray: 2690;
+		stroke-dashoffset: 2690;
+		animation: offset_fourteen 5s ease-out forwards;
+	}
+	
+	.overlay {
+
+		transform-origin: 557.5px 124.5px;
+		transform: scale(.6);
+	}
+</style>
+<g>
+    <defs>
+        <rect id="SVGID_3_" x="0" y="-145px" width="1115px" height="540px"/>
+    </defs>
+    <clipPath id="SVGID_4_">
+        <use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+    </clipPath>
+</g>
+<g class="st7">
+<g class="overlay">
+<g class="bdr">
+    <polyline class="st0" points="5.5,5.5 1109.5,5.5 1109.5,243.5 5.5,243.5 5.5,0 "/>
+</g>
+<g>
+    <g>
+        <defs>
+            <path id="SVGID_1_" d="M59.8,88.7c6-10.9,14.2-19.3,24.6-25.4c10.4-6.1,22-9.1,34.8-9.1c15.6,0,29,3.7,40.1,11.1c11.1,7.4,19.2,17.8,24.3,31.3h-16.4c-4-9.5-10.1-16.9-18.3-22.2c-8.2-5.3-18.1-8-29.7-8c-10.3,0-19.5,2.4-27.7,7.2c-8.2,4.8-14.6,11.7-19.3,20.7c-4.7,9-7,19.4-7,31.3c0,11.9,2.3,22.3,7,31.2c4.7,8.9,11.1,15.8,19.3,20.6c8.2,4.8,17.4,7.2,27.7,7.2c11.6,0,21.5-2.6,29.7-7.9c8.2-5.3,14.3-12.6,18.3-21.9h16.4c-5.1,13.3-13.2,23.7-24.4,31c-11.2,7.3-24.5,11-40,11c-12.8,0-24.4-3-34.8-9.1c-10.4-6.1-18.6-14.5-24.6-25.3c-6-10.8-9-23.1-9-36.8C50.8,111.9,53.8,99.6,59.8,88.7zM211.7,111.3c4.5-8.5,10.7-15,18.6-19.6c7.9-4.6,16.9-6.9,26.9-6.9c10.4,0,19.4,2.4,26.9,7.2c7.5,4.8,13,10.9,16.3,18.4v-24h14v109.2h-14v-24.2c-3.5,7.5-9,13.6-16.5,18.5c-7.5,4.9-16.5,7.3-26.9,7.3c-9.9,0-18.8-2.3-26.7-7c-7.9-4.7-14.1-11.3-18.6-19.8c-4.5-8.5-6.7-18.4-6.7-29.6C205,129.6,207.3,119.8,211.7,111.3z M295,117.8c-3.6-6.7-8.5-11.8-14.7-15.4c-6.2-3.6-13-5.4-20.5-5.4c-7.7,0-14.7,1.7-20.8,5.2c-6.1,3.5-11,8.5-14.5,15.1c-3.5,6.6-5.3,14.4-5.3,23.5c0,8.9,1.8,16.8,5.3,23.5c3.5,6.7,8.4,11.9,14.5,15.4c6.1,3.5,13.1,5.3,20.8,5.3c7.5,0,14.3-1.8,20.5-5.4c6.2-3.6,11.1-8.7,14.7-15.4c3.6-6.7,5.4-14.4,5.4-23.2C300.4,132.2,298.6,124.5,295,117.8zM360.4,47.6v148h-14v-148H360.4zM431,182l36.8-95.6h14.8l-43.8,109.2H423L379.2,86.4h15L431,182zM501.4,62.8c-2-2-3-4.5-3-7.4c0-2.9,1-5.4,3-7.3c2-1.9,4.4-2.9,7.2-2.9s5.2,1,7.2,2.9c2,1.9,3,4.4,3,7.3c0,2.9-1,5.4-3,7.4s-4.4,3-7.2,3S503.4,64.8,501.4,62.8z M515.6,86.4v109.2h-14V86.4H515.6zM630.6,96.5c8.3,8.1,12.4,19.8,12.4,35.1v64h-13.8v-62.4c0-11.9-3-20.9-8.9-27.2c-5.9-6.3-14-9.4-24.3-9.4c-10.5,0-18.9,3.3-25.2,10c-6.3,6.7-9.4,16.5-9.4,29.4v59.6h-14V86.4h14V105c3.5-6.7,8.5-11.8,15-15.3c6.5-3.5,13.9-5.3,22.2-5.3C611.7,84.4,622.4,88.4,630.6,96.5zM832.6,55.8v139.8h-14v-65.4h-75.8v65.4h-14V55.8h14v62.8h75.8V55.8H832.6zM871.5,188.5c-7.9-5.8-12.4-13.7-13.3-23.7h14.4c0.7,6.1,3.6,11.1,8.7,14.9c5.1,3.8,12,5.7,20.7,5.7c7.6,0,13.6-1.8,17.9-5.4c4.3-3.6,6.5-8.1,6.5-13.4c0-3.7-1.2-6.8-3.6-9.2c-2.4-2.4-5.4-4.3-9.1-5.7c-3.7-1.4-8.6-2.9-14.9-4.5c-8.1-2.1-14.7-4.3-19.8-6.4c-5.1-2.1-9.4-5.3-12.9-9.5c-3.5-4.2-5.3-9.8-5.3-16.9c0-5.3,1.6-10.3,4.8-14.8c3.2-4.5,7.7-8.1,13.6-10.8c5.9-2.7,12.5-4,20-4c11.7,0,21.2,3,28.4,8.9c7.2,5.9,11.1,14.1,11.6,24.5h-14c-0.4-6.4-2.9-11.6-7.5-15.5c-4.6-3.9-10.9-5.9-18.9-5.9c-7.1,0-12.8,1.7-17.2,5c-4.4,3.3-6.6,7.5-6.6,12.4c0,4.3,1.3,7.8,3.9,10.5c2.6,2.7,5.8,4.9,9.7,6.4c3.9,1.5,9.1,3.2,15.6,5.1c7.9,2.1,14.1,4.2,18.8,6.2c4.7,2,8.7,4.9,12,8.8c3.3,3.9,5.1,9,5.2,15.4c0,5.9-1.6,11.1-4.8,15.7c-3.2,4.6-7.7,8.2-13.4,10.9c-5.7,2.7-12.3,4-19.8,4C889.7,197.2,879.5,194.3,871.5,188.5zM1061.2,86.4v109.2h-14v-19.2c-3.2,6.8-8.1,12-14.8,15.6c-6.7,3.6-14.1,5.4-22.4,5.4c-13.1,0-23.7-4-32-12.1c-8.3-8.1-12.4-19.8-12.4-35.1V86.4h13.8v62.2c0,11.9,3,20.9,8.9,27.2c5.9,6.3,14,9.4,24.3,9.4c10.5,0,18.9-3.3,25.2-10c6.3-6.7,9.4-16.5,9.4-29.4V86.4H1061.2z"/>
+        </defs>
+        <clipPath id="SVGID_2_">
+            <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+        </clipPath>
+    </g>
+    <g class="st6">
+    	<polyline class="st1 sub_one" points="176.1,102.5 170.1,86.5 156.6,71 142.6,64 127.6,61 115.6,61 100.6,63 88.6,68 76.6,75 66.6,88 
+	    59.6,105 57.6,117 57.6,130 59.6,144 62.6,154 71.6,169 82.6,180 92.6,185 103.6,190 115.6,192 133.6,190 148.6,185 162.6,176 
+	    171.6,165 175.6,153 175.6,147 "/>
+        <line class="st2 sub_two" x1="307.6" y1="80" x2="307.6" y2="199"/>
+        <polyline class="st3 sub_three" points="312.1,140.5 296.1,112.5 289.1,101.5 273.6,93 258.6,91 247.6,91 233.6,97 221.6,108 215.6,118 
+	    212.6,129 212.6,141 212.6,150 215.6,161 219.6,170 225.6,178 232.6,185 240.6,188 249.6,190 259.6,192 271.6,190 282.6,185 
+	    291.6,178 299.6,168 304.6,157 304.6,148 306.6,141 "/>
+        <line class="st2 sub_four" x1="353.1" y1="200.5" x2="353.1" y2="41.5"/>
+        <polyline class="st2 sub_five" points="384,78.5 428,195.6 434.1,190.5 439.1,177.5 477.1,81.5 "/>
+        <line class="st4 sub_six" x1="509.1" y1="203.5" x2="509.1" y2="35.5"/>
+        <line class="st5 sub_seven" x1="552.1" y1="78.5" x2="552.1" y2="199.5"/>
+        <polyline class="st5 sub_eight" points="553.1,134.5 566.1,105.5 575.1,94.5 589.1,90.5 608.1,90.5 620.1,95.5 628.1,103.5 633.1,112.5 
+	    635.1,119.5 635.1,135.5 635.1,197.5 635.1,200.5 "/>
+        <polyline class="st5 sub_nine" points="733.5,200.5 733.5,197.5 733.5,46.5 730.1,125.5 819,125.5 "/>
+        <line class="st5 sub_ten" x1="826.1" y1="46.5" x2="826.1" y2="198.5"/>
+        <polyline class="st5 sub_eleventh" points="933.1,122.5 928.1,102.5 920.1,95.5 910.1,90.5 895.1,90.5 881.1,93.5 871.1,101.5 868.1,111.5 
+	    868.1,117.5 870.1,124.5 876.1,130.5 885.1,136.5 899.1,141.5 919.1,148.5 929.1,153.5 933.1,159.5 933.1,168.5 931.1,178.5 
+	    925.1,185.5 912.1,191.5 899.1,191.5 885.1,189.5 876.1,183.5 868.1,175.5 864.1,160.5 "/>
+        <polyline class="st5 sub_twelve" points="972.1,79.5 972.1,152.5 974.1,162.5 977.1,171.5 980.1,177.5 986.1,183.5 997.1,189.5 1005.1,191.5 
+	    1019.1,191.5 1027.1,187.5 1034.1,181.5 1039.1,171.5 1048.1,160.5 "/>
+        <line class="st5 sub_thirteen" x1="1054.1" y1="79.5" x2="1054.1" y2="200.5"/>
+    </g>
+</g>
+</g>
+</g>
+</svg>
