@@ -36,14 +36,14 @@ const darkTheme = createTheme({
   palette: {
     background: {
       default: "#1A1A1A",
-      paper: "#bd3b22",
+      paper: "#556E68",
     },
     primary: {
-      main: "#bd3b22",
+      main: "#B6CDC7",
       contrastText: "#FFF",
     },
     secondary: {
-      main: "#2C394B",
+      main: "#7C9E9D",
       contrastText: "#FFF",
     },
     text: {

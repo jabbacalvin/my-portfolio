@@ -69,7 +69,6 @@ const Home = () => {
           animate={controls}
           custom={3}
           variant="body2"
-          color="initial"
           style={{ marginBottom: "0" }}
         >
           {t("home_job")}
@@ -79,7 +78,6 @@ const Home = () => {
           animate={controls}
           custom={4}
           variant="body1"
-          color="initial"
           style={{ marginBottom: "30px" }}
         >
           {t("home_location")}

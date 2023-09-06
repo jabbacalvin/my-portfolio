@@ -54,7 +54,7 @@ const SectionContainer = ({
           }}
           className={classes.titleContainer}
         >
-          <Divider width="20%" />
+          <Divider width="20%" backgroundColor={theme.palette.primary.main} />
           <Typography
             variant="h4"
             // color="initial"
@@ -63,7 +63,7 @@ const SectionContainer = ({
           >
             {title}
           </Typography>
-          <Divider fullWidth />
+          <Divider fullWidth backgroundColor={theme.palette.primary.main} />
         </motion.div>
       )}
       <motion.div
