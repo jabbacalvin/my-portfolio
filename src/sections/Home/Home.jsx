@@ -88,18 +88,20 @@ const Home = () => {
         >
           {t("home_location")}
         </Typography>
-        <motion.div style={{ opacity }} animate={controls} custom={5}>
-          <Link to="contact" spy smooth>
-            <Button
-              offset={0}
-              duration={500}
-              variant="outlined"
-              color="secondary"
-              size="large"
-            >
-              {t("home_contact_btn")}
-            </Button>
-          </Link>
+        <motion.div animate={controls} custom={5}>
+          <motion.div style={{ opacity }}>
+            <Link to="contact" spy smooth>
+              <Button
+                offset={0}
+                duration={500}
+                variant="outlined"
+                color="secondary"
+                size="large"
+              >
+                {t("home_contact_btn")}
+              </Button>
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </HomeContainer>
