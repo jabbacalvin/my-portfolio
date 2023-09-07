@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Typography, Button, useTheme } from "@mui/material";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-scroll";
 import HomeContainer from "../../containers/HomeContainer";
 import VideoLogo from "../../components/VideoLogo";
@@ -14,6 +14,10 @@ const Home = () => {
   const { isLoading } = useContext(loaderContext);
   const controls = useAnimation();
   const { t } = useTranslation();
+  let { scrollY } = useScroll();
+  let y = useTransform(scrollY, [0, 750], ["0%", "250%"]);
+  let opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  let scale = useTransform(scrollY, [0, 750], ["100%", "70%"]);
 
   useEffect(() => {
     if (!isLoading) {
@@ -48,22 +52,24 @@ const Home = () => {
           </motion.div>
           , {t("home_i")}
         </Typography>
-        {/* <motion.div animate={controls} custom={1}>
-          <VideoLogo />
-        </motion.div> */}
-        <Typography
-          component={motion.p}
-          animate={controls}
-          custom={2}
-          variant="h2"
-          color="secondary"
-          sx={{
-            marginBottom: "16px",
-            fontSize: { lg: "75px", sm: "45px", xs: "35px" },
-          }}
-        >
-          {t("home_what_i_do")}
-        </Typography>
+        <motion.div style={{ y }}>
+          <motion.div animate={controls} custom={1}>
+            <VideoLogo />
+          </motion.div>
+          <Typography
+            component={motion.p}
+            animate={controls}
+            custom={2}
+            variant="h2"
+            color="secondary"
+            sx={{
+              marginBottom: "16px",
+              fontSize: { lg: "75px", sm: "45px", xs: "35px" },
+            }}
+          >
+            {t("home_what_i_do")}
+          </Typography>
+        </motion.div>
         <Typography
           component={motion.p}
           animate={controls}
@@ -82,13 +88,13 @@ const Home = () => {
         >
           {t("home_location")}
         </Typography>
-        <motion.div animate={controls} custom={5}>
+        <motion.div style={{ opacity }} animate={controls} custom={5}>
           <Link to="contact" spy smooth>
             <Button
               offset={0}
               duration={500}
               variant="outlined"
-              color="primary"
+              color="secondary"
               size="large"
             >
               {t("home_contact_btn")}
