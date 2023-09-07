@@ -66,7 +66,11 @@ const Navbar = ({ isDarkMode }) => {
             damping: 20,
           }}
         >
-          <Logo setHomeIsActive={setHomeIsActive} isDarkMode={isDarkMode} />
+          <Logo
+            setHomeIsActive={setHomeIsActive}
+            isDarkMode={isDarkMode}
+            isMobile={isMobile}
+          />
           <Hidden smDown>
             <Menu homeIsActive={homeIsActive} />
           </Hidden>
