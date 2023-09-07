@@ -17,6 +17,7 @@ const Home = () => {
   let { scrollY } = useScroll();
   let y = useTransform(scrollY, [0, 750], ["0%", "250%"]);
   let opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  let opacityFaster = useTransform(scrollY, [0, 110], [1, 0]);
   let scale = useTransform(scrollY, [0, 750], ["100%", "70%"]);
 
   useEffect(() => {
@@ -70,24 +71,26 @@ const Home = () => {
             {t("home_what_i_do")}
           </Typography>
         </motion.div>
-        <Typography
-          component={motion.p}
-          animate={controls}
-          custom={3}
-          variant="body2"
-          style={{ marginBottom: "0" }}
-        >
-          {t("home_job")}
-        </Typography>
-        <Typography
-          component={motion.p}
-          animate={controls}
-          custom={4}
-          variant="body1"
-          style={{ marginBottom: "30px" }}
-        >
-          {t("home_location")}
-        </Typography>
+        <motion.div style={{ opacity: opacityFaster }}>
+          <Typography
+            component={motion.p}
+            animate={controls}
+            custom={3}
+            variant="body2"
+            style={{ marginBottom: "0" }}
+          >
+            {t("home_job")}
+          </Typography>
+          <Typography
+            component={motion.p}
+            animate={controls}
+            custom={4}
+            variant="body1"
+            style={{ marginBottom: "30px" }}
+          >
+            {t("home_location")}
+          </Typography>
+        </motion.div>
         <motion.div animate={controls} custom={5}>
           <motion.div style={{ opacity }}>
             <Link to="contact" spy smooth>
