@@ -21,8 +21,8 @@ const styles = (theme) => ({
   wrapper: {
     overflow: "hidden",
     position: "relative",
-    width: "450px",
-    height: "80px",
+    width: "380px",
+    height: "65px",
     [theme.breakpoints.down("xs")]: {
       width: "230px",
       height: "53px",
@@ -34,7 +34,7 @@ const styles = (theme) => ({
     top: 0,
     left: 0,
     right: 0,
-    width: "450px",
+    width: "372px",
     [theme.breakpoints.down("xs")]: {
       width: "230px",
       height: "52px",
@@ -46,8 +46,8 @@ const styles = (theme) => ({
     top: 0,
     left: "1px",
     right: "1px",
-    width: "445px",
-    height: "255px",
+    width: "366px",
+    height: "220px",
     [theme.breakpoints.down("xs")]: {
       width: "228px",
       height: "52px",

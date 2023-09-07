@@ -53,58 +53,52 @@ const Home = () => {
           </motion.div>
           , {t("home_i")}
         </Typography>
-        <motion.div style={{ y }}>
-          <motion.div animate={controls} custom={1}>
-            <VideoLogo />
-          </motion.div>
-          <Typography
-            component={motion.p}
-            animate={controls}
-            custom={2}
-            variant="h2"
-            color="secondary"
-            sx={{
-              marginBottom: "16px",
-              fontSize: { lg: "75px", sm: "45px", xs: "35px" },
-            }}
-          >
-            {t("home_what_i_do")}
-          </Typography>
+        <motion.div animate={controls} custom={1}>
+          <VideoLogo />
         </motion.div>
-        <motion.div style={{ opacity: opacityFaster }}>
-          <Typography
-            component={motion.p}
-            animate={controls}
-            custom={3}
-            variant="body2"
-            style={{ marginBottom: "0" }}
-          >
-            {t("home_job")}
-          </Typography>
-          <Typography
-            component={motion.p}
-            animate={controls}
-            custom={4}
-            variant="body1"
-            style={{ marginBottom: "30px" }}
-          >
-            {t("home_location")}
-          </Typography>
-        </motion.div>
+        <Typography
+          component={motion.p}
+          animate={controls}
+          custom={2}
+          variant="h2"
+          color="secondary"
+          sx={{
+            marginBottom: "16px",
+            fontSize: { lg: "75px", sm: "45px", xs: "35px" },
+          }}
+        >
+          {t("home_what_i_do")}
+        </Typography>
+        <Typography
+          component={motion.p}
+          animate={controls}
+          custom={3}
+          variant="body2"
+          style={{ marginBottom: "0" }}
+        >
+          {t("home_job")}
+        </Typography>
+        <Typography
+          component={motion.p}
+          animate={controls}
+          custom={4}
+          variant="body1"
+          style={{ marginBottom: "30px" }}
+        >
+          {t("home_location")}
+        </Typography>
         <motion.div animate={controls} custom={5}>
-          <motion.div style={{ opacity }}>
-            <Link to="contact" spy smooth>
-              <Button
-                offset={0}
-                duration={500}
-                variant="outlined"
-                color="secondary"
-                size="large"
-              >
-                {t("home_contact_btn")}
-              </Button>
-            </Link>
-          </motion.div>
+          <Link to="contact" spy smooth>
+            <Button
+              offset={0}
+              duration={500}
+              variant="outlined"
+              color="secondary"
+              size="large"
+            >
+              {t("home_contact_btn")}
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </HomeContainer>
