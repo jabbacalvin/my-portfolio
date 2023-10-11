@@ -133,7 +133,7 @@ const projectList = [
       { title: "Stripe API", icon: "FaStripe" },
       { title: "Highcharts", icon: "" },
     ],
-    liveSite: "https://creatorwallet-069546a7dcb0.herokuapp.com/",
+    liveSite: "https://creatorwallet2-f02c1911c973.herokuapp.com/",
     github: "https://github.com/kenneychan/creatorWallet",
     staticImage: img4,
     gifImage: gif4,
